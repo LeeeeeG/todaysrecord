@@ -1,0 +1,13 @@
+*{margin: 0; padding: 0;}
+body{background: url(../images2/grid_back_02.gif);}
+#wrap{width: 770px; height: 560px; margin-top: 210px; margin-left: 210px;}
+.color1{background: url(../images2/grid_color1.gif);}
+.color2{background: url(../images2/grid_color2.gif);}
+.color3{background: url(../images2/grid_color3.gif);}
+.fl{float: left;}
+.box2_3{width: 140px; height: 210px; background: #fff;}
+.box1_3{width: 70px; height: 210px;}
+.box3_3{width: 210px; height: 210px;}
+.box1_1{width: 70px; height: 70px;}
+
+ul{list-style: none; line-height: .7; text-align: center;}

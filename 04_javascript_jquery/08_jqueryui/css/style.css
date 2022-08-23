@@ -1,0 +1,29 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+body{background: navy;}
+.container{background: gold; width: 500px; margin: 30px auto; padding: 20px;}
+h1{text-align: center; margin-bottom: 20px;}
+form>.ui-widget{margin-bottom: 20px;}
+.ui-widget label{display: block; font-weight: bold; margin-bottom: 5px;}
+/* .ui-widget select{display: block; width: 100%; background: #ddd; border: 2px solid #222; padding: 10px;} */
+
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 100%;}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{background: lightgoldenrodyellow;}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{background: lightgoldenrodyellow; border: 1px solid lightgoldenrodyellow; color: #aaa;}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{background: lightgoldenrodyellow;}
+
+.ui-widget-content{max-width: 460px; width: 100%; background: lightgoldenrodyellow;}
+.ui-spinner-input{width: 92%;}
+
+.ui-datepicker table{width: 100%;}
+
+
+#submit{margin-top: 20px; width: 100%; padding: 10px 0; background: lightgoldenrodyellow; border: none;}
+
+#progress{position: relative; height: 32px;}
+#progress .pct{position: absolute; top: 10px; left: 50%; transform: translate(-50%, -50%);}

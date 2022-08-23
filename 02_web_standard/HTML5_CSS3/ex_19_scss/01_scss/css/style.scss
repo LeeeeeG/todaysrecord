@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+body{padding-bottom: 100px; background: rgba(0, 0, 128, 0.5);}
+.wrap{width: 1000px; margin: 0 auto; background: #fff; padding: 20px 50px;}
+
+
+/*1.변수는 영문, 영문+숫자, 영문-, _소문자*/
+$gray:#666;
+$white:#fff;
+$red:red;
+$blue:rgb(94, 94, 255);
+$fs24:24px;
+
+.btn1{width: 200px; height: 50px; line-height: 50px; font-size: $fs24; color: $gray; background: $white; border: 1px solid $gray; text-align: center; display: block; &:hover{background: $gray; color: $white;}}
+.btn2{padding: 10px; font-size: 20px; border: 1px solid $red; background: $blue; &:hover{background: $red;} margin-top: 10px;}
+
+
+/*2. 자식 선택자 & 종속 선택자*/
+.sass{color: $red;
+    ul{border: 1px solid $red;
+        li{background: pink; margin-bottom: 5px; list-style: none;
+            a{text-decoration: none; &:hover{color: $red;} &.bbb{font-size: 12px;}} //class 선택방법 : 형제요소
+        .bbb{text-decoration: underline;} //class선택방법 : 자녀요소
+        &:last-child{border: 1px dotted $blue;}} //nth-child : 본인
+    }
+}
+
+
+/*3. mixin, include*/
+@mixin test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid $red;
+    box-shadow: 2px 2px 2px #222;
+} //함수처럼 스타일 만들기
+.test,.last,.first{@include test()} //만들어놓은 스타일 불러주기
+
+@mixin clear {
+    &::after{content: ""; display: block; clear: both;}
+}
+.clearfix{@include clear(); border: 3px solid $blue;
+    p{float: left; @include test();}
+}
+
+
+/*4. 매개변수*/
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+.var{@include border($blue);}
+.red{@include border(rgb(255, 0, 0));}
+.green{@include border(green);}
+
+@mixin box($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.var2{@include box(300px, 100px); background: yellow;}
+.var3{@include box(500px, 100px); background: green;}
+
+
+/*5. 문자보관*/
+$bx:string1;
+div.#{$bx}{border:1px solid yellowgreen;} //변수에 담아놓은 글을 클래스 명으로 가져오고 싶을 때 .#{변수} 형식으로 가져오면 된다
+
+@mixin bx1($position, $wid, $color1) {
+    border-#{$position} : $wid solid $color1;
+}
+
+.string2{@include bx1(left, 5px, red); @include bx1(right, 3px, green)}
+.string3{@include bx1(top, 2px, blue);}
+
+
+/*6. for 반복문*/
+.list li{background: no-repeat 0 0/20px 30px; text-indent: 30px; line-height: 50px;}
+// .list li.ico1{background: url(../img/ico1.png);}
+@for $i from 1 to 6{
+    .list li.ico#{$i}{background-image: url(../img/ico#{$i}.png);}
+    .list li:nth-child(#{$i})::before{content: "...짱!#{$i} ";}
+}
+
+
+/*7. each문*/
+@each $var in book, zoom, new{
+    .ico_#{$var}{
+        background: url(../img/#{$var}.png) no-repeat; text-indent: 80px;
+    }
+}
+
+$heading:(
+    h1:30px,
+    h2:20px,
+    h3:15px
+);
+
+@each $ele, $fs in $heading{
+    #{$ele}{font-size: $fs;}
+}
+
+
+/*8. 조건문*/
+@mixin btn_radius($h,$radius:true) {
+    padding: 0 20px;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background: #000;
+    color: #fff;
+
+    @if $radius{
+        border-radius: $h/2;
+    }@else{
+        border: 1px solid red;
+    }
+}
+.btn{
+    @include btn_radius(30px,true)
+}
+
+@mixin position($x,$y,$z) {
+    position: absolute;
+    left: $x;
+    top: $y;
+    z-index: $z;
+    
+    @if $x==50% and $y==50%{
+        transform: translate(-50%,-50%);
+    }@else if $x==50%{
+        transform: translateX(-50%);
+    }@else if $y==50%{
+        transform: translateY(-50%);
+    }
+}
+.if{
+    width: 300px; height: 300px; background: #000080;
+    @include position(50%, null, 2)
+}

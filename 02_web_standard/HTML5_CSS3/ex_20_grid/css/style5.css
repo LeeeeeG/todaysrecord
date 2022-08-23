@@ -1,0 +1,13 @@
+html, body{background: #ffeead; margin: 10px;}
+.container div{display: flex; align-items: center; justify-content: center; color: #ffeead; font-size: 2em;}
+.container div:nth-child(1n){background: red;}
+.container div:nth-child(2n){background: orange;}
+.container div:nth-child(3n){background: yellow;}
+.container div:nth-child(4n){background: green;}
+.container{ 
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* grid-template-rows: repeat(2,100px); */
+    grid-auto-rows: 100px;
+}

@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0;}
+body{background: #ccc; margin: 50px;}
+h1{text-align: center; font-style: italic; text-shadow: 0 0 10px #666; color: #fff;}
+#photoBox{width: 330px; margin: 50px auto;}
+#photoBox ul{overflow: hidden; padding-left: 100px;}
+#photoBox ul .activeS a{background: #f63; color: #fff;}
+#photoBox ul li:hover a{background: #f63; color: #fff;}
+#photoBox ul li{float: left; list-style: none;}
+#photoBox ul li a{background: #fff; width: 50px; display: block; padding: 3px 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; color: #f63; text-decoration: none; text-align: center;}
+#photoBox #photo{border: 5px solid #f63; background: #fff; border-radius: 15px; text-align: center;}

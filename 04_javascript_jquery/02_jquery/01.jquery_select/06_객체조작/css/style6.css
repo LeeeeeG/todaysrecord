@@ -1,0 +1,5 @@
+#wrap{width: 1000px; padding: 30px; margin: 50px auto;}
+.sec{border: 3px solid brown; padding: 20px; margin-bottom: 10px;}
+#sec1 div{margin-bottom: 5px;}
+.div1{padding: 5px; background: palegoldenrod; margin-bottom: 5px;}
+#hover, #mouseenter{padding: 7px;}

@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+h1{font-style: italic; color: #fff; text-shadow: 0 0 10px #aaa; text-align: center;}
+li{list-style: none;}
+body{background-image: url(/02_web_standard/Web_Standard/ex09/images/book_bg.png) no-repeat center; width: 900px; height: 600px;}
+#bookList ul li a{display: block; float: left;}
+#bookList ul li a span img{box-shadow: 0 0 10px #000;}
+#bookList ul li a span img:hover{box-shadow: 0 0 30px rgb(43, 255, 0);}
+#bookList ul li a span img .hit{border: 5px solid #fff;}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: aliceblue; }
+
+.page-main{width: 1140px; margin: auto; padding: 0 10px 100px;}
+.gallery::after{content: ""; display: block; clear: both;}
+.gallery .gallery-item{float: left; margin-top: 10px; background: navy; padding: 20px; animation: fadeIn 1s; text-align: center;}
+
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.gallery .gallery-item.is-loading{opacity: 0;}
+.load-more{width: 100%; border: none; background: navy; color: aliceblue; padding: 10px 20px; box-sizing: border-box; margin-top: 20px;}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 맛보기</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script>
+        var box;
+        box=100;
+        box=500;
+        document.write(box);
+        document.write("<br/>");
+        document.write("<hr/>");
+        // var box=200
+        // console.log(box)
+        // let box1
+        // box1=200;
+        // let box1=300;
+        // console.log(box1)
+        var str="안녕하세요. 오늘은 금요일이었으면 좋겠네요ㅜ"
+        // 문자형 데이터 string
+        document.write(str); 
+        document.write("<hr/>");
+
+        // 숫자형 데이터 number
+        var num=5;
+        document.write(num);
+        document.write("<br/>");
+        var num1=Number("5");
+        document.write(num1);
+        document.write("<hr/>");
+
+        // 논리형 데이터 boolean 참/거짓
+        var s=10>9;
+        var t=Boolean("");//값이 있으면 true("123"), 없으면 false("")
+        var o=0 //0은 false 1은 true
+        document.write(s);
+        document.write("<br/>");
+        document.write(t);
+        document.write("<br/>");
+        document.write(o);
+        //null(비어있는 것), undefinded(정의되지 않은 것), (""), 0 => false
+        //위의 경우를 제외한 나머지 = 값이 있는 것 => true
+        document.write("<hr/>");
+
+
+        //typeof
+        var nums=100;
+        var strs="자바스크립트";
+        document.write(typeof nums, "<br/>");
+        document.write(typeof strs, "<br/>");
+    </script>
+</body>
+</html>

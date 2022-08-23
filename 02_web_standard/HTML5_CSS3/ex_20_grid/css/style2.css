@@ -1,0 +1,16 @@
+body{padding: 50px;}
+.container div{text-align: center; color: #fff; font-size: 2em;}
+.container div:nth-child(1){background: red;}
+.container div:nth-child(2){background: orange;}
+.container div:nth-child(3){background: yellow;}
+.container div:nth-child(4){background: green;}
+.container div:nth-child(5){background: blue;}
+.container div:nth-child(6){background: navy;}
+.container{display: grid; 
+/* grid-template-columns: auto auto auto;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: repeat(3,1fr); 3개가 전부 같음 */
+/* grid-template-rows: 50px 50px;
+grid-template-rows: repeat(2, 50px); 2개가 같음*/
+grid-template: repeat(2, 50px) / repeat(3, 1fr); /*이런식으로도 사용 가능*/
+grid-gap: 3px;}

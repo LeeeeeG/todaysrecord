@@ -1,0 +1,67 @@
+$('.stick').animate({
+    top:500
+},500);
+$('.ball1').delay(500).animate({
+    top:220
+},500).animate({
+    top:210,
+    left:180
+},500);
+$('.ball2').delay(1000).animate({
+    top:180,
+    left:231
+},500);
+$('.ball3').delay(1000).animate({
+    top:150,
+    left:127
+},500);
+$('.ball4').delay(1000).animate({
+    top:133,
+    left:170
+},500);
+$('.ball5').delay(1000).animate({
+    top:93,
+    left:97
+},500);
+$('.ball6').delay(1000).animate({
+    top:81,
+    left:149
+},500);
+$('.ball7').delay(1000).animate({
+    top:69,
+    left:234
+},500);
+$('.ball8').delay(1000).animate({
+    top:0,
+    left:46
+},500).animate({
+    top:57,
+    left:0
+},500).animate({
+    top:76,
+    left:71
+},500);
+$('.ball9').delay(1000).animate({
+    top:0,
+    left:153
+},500).animate({
+    top:19,
+    left:121
+},500);
+$('.ball10').delay(1000).animate({
+    top:0,
+    left:215
+},500).animate({
+    top:36,
+    left:320
+},500);
+$('.ball11').delay(1000).animate({
+    top:5,
+    left:317
+},500).animate({
+    top:63,
+    left:380
+},500).animate({
+    top:121,
+    left:350
+},500);

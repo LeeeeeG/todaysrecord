@@ -1,0 +1,8 @@
+a{text-decoration: none; color: #333; display: block;}
+.nav-link{color: #000;}
+.introduction img{width: 175px; height: 175px;}
+section{margin: 3rem 0;}
+
+@media screen and (max-width:560px) {
+    .col-sm-12{flex: 0 0 auto; width: 100%; text-align: center;}
+}

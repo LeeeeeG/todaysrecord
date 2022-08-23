@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* #wrap{width: 700px; height: 550px; margin: 50px auto; background: lightgoldenrodyellow;}
+.header{width: 700px; height: 100px; background: #aaa;}
+.main{width: 700px; height: 400px; background: #bbb;}
+.aside_a{width: 100px; height: 100px; background: yellow; float: left; clear: both;}
+.aside_b{width: 100px; height: 100px; background: blue; float: left; clear: both;}
+.article_a{width: 500px; height: 200px; background: aquamarine; float: right;}
+.article_b{width: 500px; height: 200px; background: skyblue; float: left;}
+.aside_c{width: 100px; height: 100px; background: blue; float: right; clear: both;}
+.aside_d{width: 100px; height: 100px; background: blue; float: right; clear: both;}
+.aside_e{width: 100px; height: 200px; background: lightskyblue; float: right;}
+.footer{width: 700px; height: 100px; background: #ccc;} */
+
+
+#wrap{width: 700px; height: 550px;margin: 50px auto; background: #ff0; border: 10px solid #f00}
+
+#header{width:100%; height: 90px; background: #ddd; text-align: center; line-height: 90px; border-bottom: 10px solid #f00;}
+#section{width: 100%; height: 400px;}
+#footer{width: 100%; height: 40px; text-align: center; background: #ddd; line-height: 40px; border-top: 10px solid #f00;}
+
+.left{width: 100px; height: 100%; background: #ccc;float: left;}
+.center{width: 480px; height: 100%; background: rgb(241, 223, 223);float: left; border-left: 10px solid #f00; border-right: 10px solid #f00;}
+.right{width: 100px; height: 100%; background: #ccc;float: left;}
+
+.box1_1{width: 100px; height: 100px;}
+.box5_2{width: 480px; height:200px;}
+.box1_2{width: 100px; height:200px;}
+.color1{background: yellow;}
+.color2{background: blue;}
+.color3{background: rgb(21, 221, 231);}
+.color4{background: rgb(9, 133, 140);}
+.color5{background: rgb(12, 40, 220);}
+.color6{background: rgb(87, 154, 235);}

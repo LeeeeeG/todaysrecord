@@ -1,0 +1,16 @@
+$('#springBtn').click(function(){
+    $('#image').removeClass()
+    $('#image').addClass('spring')
+})
+$('#summerBtn').click(function(){
+    $('#image').removeClass()
+    $('#image').addClass('summer')
+})
+$('#autumnBtn').click(function(){
+    $('#image').removeClass()
+    $('#image').addClass('autumn')
+})
+$('#winterBtn').click(function(){
+    $('#image').removeClass()
+    $('#image').addClass('winter')
+})

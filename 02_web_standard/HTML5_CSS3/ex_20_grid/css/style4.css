@@ -1,0 +1,21 @@
+html, body{background: #ffeead; margin: 10px;}
+.container div{display: flex; align-items: center; justify-content: center; color: #ffeead; font-size: 2em;}
+.container div:nth-child(1n){background: red;}
+.container div:nth-child(2){background: orange;}
+.container div:nth-child(3){background: yellow;}
+.container div:nth-child(4){background: green;}
+.container{ 
+    display: grid; 
+    grid-gap: 3px; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+    grid-template-areas: 
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c c c c"
+    ". f f f f f f f f f f ."
+    ; /*빈공간은 .*/
+}
+.header{grid-area: h;}
+.menu{grid-area: m;}
+.content{grid-area: c;}
+.footer{grid-area: f;}

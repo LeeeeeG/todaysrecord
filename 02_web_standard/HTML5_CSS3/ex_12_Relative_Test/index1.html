@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{width: 700px; height: 400px; background: blueviolet; margin: 100px auto; position: relative;}
+        .box1{width: 100px; height: 100px; background: lawngreen; position: absolute; top:-50px; transition: 0.5s;}
+        .box1:hover{top: -100px;}
+        .box2{width: 100px; height: 100px; background: blue; position: absolute; top:0;}
+        .box3{width: 100px; height: 100px; background: red; position: absolute; top: 100px; transition: 0.5s; left: 0;}
+        .box3:hover{left: -100px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

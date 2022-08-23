@@ -1,0 +1,34 @@
+.box-wrap{width: 1000px; margin: 0 auto;}
+p{color: red; font-weight: bold;}
+.container1{width: 100%; height: 100px; border: 3px solid #ddd; text-align: center;}
+.box{background: yellow; display: inline-block;}
+
+.container2{width: 100%; height: 300px; border: 3px solid #ddd;}
+.box2{width: 200px; height: 200px; background: yellowgreen; margin: 50px auto; text-align: center; line-height: 200px;}
+
+.container3{width: 100%; height: 300px; border: 3px solid #ddd; text-align: center;}
+.box3{width: 150px; background: green; display: inline-block;}
+
+.container4{width: 100%; height: 300px; border: 3px solid #ddd; text-align: center; display: flex; justify-content: center;}
+.box4{width: 150px; height: 100px; background: gold; line-height: 100px; margin-left: 5px;}
+
+.container5{width: 100%; border: 3px solid #ddd; padding: 50px 0;}
+
+.container6{width: 100%; height: 200px; border: 3px solid #ddd; padding: 50px 0; line-height: 200px;}
+
+.container7{width: 100%; height: 200px; border: 3px solid #ddd; padding: 50px 0; display: table;}
+.child{display: table-cell; vertical-align: middle;}
+
+.container8{width: 100%; height: 200px; border: 3px solid #ddd; display: flex; flex-direction: column; justify-content: center;}
+
+.container9{width: 100%; height: 200px; border: 3px solid #ddd; position: relative;}
+.box5{width: 100px; height: 100px; background: blue; position: absolute; top: 50%; margin-top: -50px;}
+
+.container10{width: 100%; height: 500px; border: 3px solid #ddd; position: relative;}
+.box6{width: 200px; background: blue; position: absolute; top: 50%; transform: translateY(-50%);}
+
+.container11{width: 100%; height: 500px; border: 3px solid #ddd; display: flex; flex-direction: column; justify-content: center;}
+.box7{width: 200px; height: 100px; background: yellow; margin-bottom: 5px;}
+
+.container12{width: 100%; height: 500px; border: 3px solid #ddd; position: relative;}
+.box8{width: 100px; height: 100px; background: aqua; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}

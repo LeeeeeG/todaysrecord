@@ -1,0 +1,9 @@
+*{margin: 0; padding: 0; list-style: none;}
+.all{width: 610px; margin: 50px auto;}
+.all .tabSet{margin-bottom: 10px;}
+.all .tabSet .tabs{display: flex;}
+.all .tabSet .tabs li{flex-basis: 100px; text-align: center; margin-right: 2px;}
+.all .tabSet .tabs li a{display: block; padding: 10px; width: 100%; background: rgb(113, 113, 255); text-decoration: none; box-sizing: border-box; text-transform: uppercase; color: #efefef;}
+.all .tabSet .tabs li a.on{background: rgb(57, 57, 255);}
+.all .tabSet .panels{position: relative; background: rgb(143, 143, 255); padding: 30px; height: 90px;}
+.all .tabSet .panels .panel{position: absolute; width: 550px;}

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>로긴 폼 문서 만들기</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/0501.css">
+		<style type="text/css">
+
+			/* Login Form Design */
+/* 				fieldset{width: 500px; height: 300px; margin: 0 auto; border-radius: 10px; border: 5px solid #aaa;}
+				legend{display: none;}
+				p{float: left;}
+				#login{margin: 30px 0;}
+				.labelStyle{}
+				#btnLogin{display: block; width: 100px; height: 60px; background-color: orangered; border: none; border-radius: 5px; color: #fff;}
+				#btn1{width: 400px; margin: 10px 0;}
+				#btnJoin, #btnSearch{background-color: #333; color: #fff; border: none; border-radius: 5px; padding: 5px;} */
+		</style>
+	</head>
+
+	<body>
+		<form id="loginForm">
+			<h1>Member Login</h1>
+			<fieldset>	
+				<legend>Member Loin</legend>
+				<div id="login">
+					<p>
+						<label for="userId" class="labelStyle">아이디</label>
+						<input type="text" id="userId" />
+					</p>
+					<p>
+						<label for="userPWD" class="labelStyle">비밀번호</label>
+						<input type="password" id="userPWD" />
+					</p>
+				</div>
+					<input type="submit" value="로그인하기" id="btnLogin" />
+				<p id="btn1">
+					<input type="checkbox" id="saveId" value="savedIdYes" />
+					<label for="saveId">아이디저장</label>	
+					<input type="checkbox" id="secure" value="secureYes" />
+					<label for="secure">보안접속</label>	
+				</p>
+				<p id="btn2">
+					<input type="button" value="회원가입" id="btnJoin" />
+					<input type="button" value="아이디/비밀번호 찾기" id="btnSearch" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

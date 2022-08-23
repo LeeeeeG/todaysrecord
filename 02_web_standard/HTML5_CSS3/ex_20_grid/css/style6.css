@@ -1,0 +1,27 @@
+html, body{background: #ffeead; margin: 10px;}
+.title{text-align: center; padding: 10px 0; margin: 0; color: navy;}
+.container div{display: flex; align-items: center; justify-content: center; color: #ffeead; font-size: 2em;}
+.container2 div{display: flex; align-items: center; justify-content: center; color: #ffeead; font-size: 2em;}
+.container div:nth-child(1n){background: red;}
+.container div:nth-child(2n){background: orange;}
+.container div:nth-child(3n){background: yellow;}
+.container div:nth-child(4n){background: green;}
+.container2 div:nth-child(1n){background: red;}
+.container2 div:nth-child(2n){background: orange;}
+.container2 div:nth-child(3n){background: yellow;}
+.container2 div:nth-child(4n){background: green;}
+
+.container{ 
+    border: 5px solid coral;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+.container2{
+    border: 5px solid skyblue;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 100px 100px;
+}

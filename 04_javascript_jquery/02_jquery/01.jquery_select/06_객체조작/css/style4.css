@@ -1,0 +1,19 @@
+#wrap{width: 1000px; padding: 30px; margin: 50px auto;}
+.sec{border: 3px solid brown; padding: 20px; margin-bottom: 10px;}
+#sec1 div{margin-bottom: 5px;}
+.box{border: 3px solid sandybrown; padding: 20px;}
+.div1{display: none;}
+.div2{display: block;}
+.div3{width: 100px; height: 100px; background: thistle; display: none;}
+.div4{width: 100px; height: 100px; background: lightgoldenrodyellow; display: block;}
+.box2 div{background: plum; margin-bottom: 10px;}
+.container{height: 100px; margin-bottom: 10px;}
+.div7{background: royalblue; height: 100%; display: none;}
+.div8{background: violet; height: 100%;}
+.div9{background: chartreuse; height: 100%;}
+.div10{background: lightseagreen; height: 100%; display: none;}
+.div11{background: lightgray; height: 100%;}
+.box5{height: 700px; position: relative;}
+.div12{padding: 30px; position: absolute; background: salmon; top: 0; left: 0;}
+.div13{padding: 30px; position: absolute; background: grey; bottom: 0; right: 0;}
+.div14{padding: 30px; position: absolute; background: red; bottom: 0; left: 0;}

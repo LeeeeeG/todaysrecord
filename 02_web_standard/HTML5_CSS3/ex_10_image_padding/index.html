@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 여백을 없애는 방법</title>
+    <style>
+        p{font-weight: bold;}
+        .container{width: 510px; border: 1px solid red;}
+        .container img{display: block;}
+
+        .container2{width: 510px; border: 1px solid blue;}
+        .container2 img{vertical-align: bottom;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.pixabay.com/photo/2022/06/02/18/20/knitting-7238657__340.jpg" alt="꽃">
+    </div>
+    <p>1. img에 display:block;을 지정하여 블럭요소화 (img가 더이상 텍스트로 취급되지 않음)</p>
+
+    <hr>
+    <div class="container2">
+        <img src="https://cdn.pixabay.com/photo/2021/11/30/08/24/strawberries-6834750__340.jpg" alt="딸기">
+    </div>
+    <p>2. img에 vertical-align: bottom;을 지정 (img요소가 가진 line-height값을 없애는 방식)</p>
+
+    <p>*img요소는 인라인요소이며, 텍스트 취급 된다. <br>
+    브라우저는 요소 내의 텍스트를 렌더링할 때 나름의 방식이 있는데, 이를 이해하기 위해서는 타이포그래피에 대한 이해가 선행되어야 한다.
+    </p>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        var num1=15;
+        var num2=2;
+        var result;
+        result=num1+num2;
+        document.write(result,"<hr/>");
+        result=num1-num2;
+        document.write(result,"<hr/>");
+        result=num1*num2;
+        document.write(result,"<hr/>");
+        result=num1/num2;
+        document.write(result,"<hr/>");
+        result=num1%num2; //나누고 남은 나머지값
+        document.write(result,"<hr/>");
+
+
+        //문자결합연산자
+        var t1="학교종이";
+        var t2="땡땡땡";
+        var t3=8282; //숫자가 포함돼도 다른 변수들 중에 string이 있으면 결과값이 srting이 됨
+        var t4="어서 모이자";
+        var result;
+
+        result=t1+t2+t3+t4;
+        document.write(result, "<br/>");
+        document.write(typeof result, "<hr/>");
+
+        var s1=1212;
+        var s2=2222;
+        var s3=8282;
+        var s4=9191;
+        var result;
+
+        result=s1+s2+s3+s4;
+        document.write(result, "<br/>");
+        document.write(typeof result, "<hr/>"); 
+        //이크마5
+
+
+        //대입연산자 Assignment operators
+        var num3=10;
+        var num4=3;
+
+        num3+=num4;
+        document.write(num3, "<br/>");
+        
+        num3-=num4;
+        document.write(num3, "<br/>");
+
+        num3*=num4;
+        document.write(num3, "<br/>");
+
+        num3/=num4;
+        document.write(num3, "<br/>");
+
+        num3%=num4;
+        document.write(num3, "<br/>");
+
+
+        let x=75;
+        let y=87;
+
+        x+=y;
+        document.write(`합계 : ${x}`);  
+        document.write("<br/>");
+        document.write(`평균 : `);
+        document.write(x/2, "<hr/>");  
+        //이크마6
+    
+
+        //실습 : 대입연산자
+        var str="<table border='1'>";
+        str+="<tr>";
+        str+="<td>1</td><td>2</td><td>3</td>";
+        str+="</tr>";
+        str+="</table>";
+        document.write(str);
+
+
+        //증감연산자 incrument and decrement operators
+        var x1=1;
+
+        document.write(x1++); 
+        document.write(x1++);
+        document.write(x1++);
+        document.write(x1++);
+        document.write("<br/>");
+        
+    
+        var x2=1;
+        document.write(++x2); 
+        document.write(++x2);
+        document.write(++x2);
+        document.write(++x2);
+        document.write("<br/>");
+
+        var num5=10;
+        var num6=20;
+        var result3;
+
+        num5--;
+        document.write(num5, "<br/>");
+
+        num5++;
+        document.write(num5, "<hr/>");
+
+
+        //비교연산자 Comparison operators
+        var k=10, m="10", result4, result5;
+        result4= k==m;
+        document.write(result4, "<br/>");
+        result5= k===m;
+        document.write(result5, "<hr/>");
+
+        var a=10, b=20, c=10, f="20", result6;
+        result6= a>b;
+        document.write(result6, "<br/>");
+
+        result6= a<b;
+        document.write(result6, "<br/>");
+
+        result6= a>=b;
+        document.write(result6, "<br/>");
+
+        result6= b==f;
+        document.write(result6, "<br/>");
+
+        result6= b===f;
+        document.write(result6, "<br/>"); //===는 데이터 유형을 가림
+
+        result6= a!=b;
+        document.write(result6, "<br/>");
+
+        result6= b!=f;
+        document.write(result6, "<br/>"); //!=는 데이터 유형을 가림
+
+
+        //논리연산자 Logical operators
+        var x3=(7>6)&&(1>8); //and
+        var y3=(7>6)||(1>8); //or : 앞의 값이 참이면 뒤의 것은 읽지 않음, 앞쪽에 가볍거나 연산이 쉬운 식을 적어야
+        var z=!(7>6); //not
+
+        document.write("7이 6보다 크고 1이 8보다 크면 논리값은?")
+        document.write(x3, "<br/>"); //false
+        document.write(y3, "<br/>"); //true
+        document.write(z, "<br/>"); //false
+
+        const value1=false;
+        const value2=4<2;
+        function check(){
+            for(let i=0; i<10; i++){
+                console.log('LOVE')
+            }
+            return false;
+        };
+        console.log(`or: ${value1||value2||check()}`);
+
+        document.write("<hr>");
+
+        //연산자 우선순위
+        var x4=10;
+        var y4=20;
+
+        document.write(x4+y4/2); //y/2 먼저 계산
+        document.write("<br>");
+        document.write((x4+y4)/2); //x+y 먼저 계산
+        document.write("<br>");
+        document.write((x4+y4)/2*3); // {(x+y)/2}*3
+        document.write("<hr>");
+
+        //삼항 조건 연산자 Conditional operators
+        var a1=10, b1=3;
+        var result=a1>b1?"javascript":"hello";
+        document.write(result);
+        document.write("<br>");
+        var result=a1<b1?"javascript":"hello";
+        document.write(result);
+        document.write("<hr>");
+
+        //실습 : 20대 대상의 소개팅을 준비 중입니다. 그런데 남성은 다 모집이 되었지만, 여성은 아직 모집되지 않았네요. prompt 메서드를 활용하여 성별과 나이를 물어봅니다. 20대 여성이라면 결과값이 true로, 아니라면 결과값이 false로 출력되게 만드세요.
+        
+       /*  var gender=prompt("성별이 어떻게 됩니까?", "여성");
+        var age=prompt("연령이 어떻게 됩니까?", "20");
+        var result7=age>=20 && age<30 && gender=="여성";
+        
+        document.write(result7)
+        document.write("<hr>") */
+
+        //실습 : prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요. 평균이 70점 이상이고 각 과목 별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.
+        /* var korean=Number(prompt("국어점수가 어떻게 됩니까?","0"));
+        var english=Number(prompt("영어점수가 어떻게 됩니까?","0"));
+        var math=Number(prompt("수학점수가 어떻게 됩니까?","0"));
+        var average=(korean+english+math)/3;
+        
+        result=korean>=60&&english>=60&&math>=60&&average>=70;
+
+        document.write(result);
+        document.write("<hr>"); */
+
+        //실습 : 지현샘의 지출 내역은 교통비 3,000원, 식비 7,000원, 음료비 2,000원입니다. 삼항 조건 연산자를 사용하여 하루 적정 지출 비용인 1만원을 초과했을 경우 '000원 초과'라고 출력되거나, 아니면 '돈 관리 참 잘했어요!' 라고 출력되도록 해보세요.
+        /* var mo1=3000;
+        var mo2=7000;
+        var mo3=2000;
+        var total=mo1+mo2+mo3;
+        // var result=total>10000?total-10000+"원 초과":"돈 관리 참 잘했어요!";
+        var result=total>10000?`${total-10000}원 초과`:"돈 관리 참 잘했어요!";
+        document.write(result);
+        document.write("<hr>"); */
+
+        //실습 : 질의응답 창(prompt)을 이용하여 신장과 몸무게를 입력받습니다. 방문자의 몸무게가 적정 몸무게 이상일 경우 '적정 몸무게 이상', 미달일 경우 '적정 몸무게 미달'로 출력되도록 만드세요. 적정몸무게=(신장-100)*0.9
+
+        var height=Number(prompt("키를 적으세요.","0"));
+        var weight=Number(prompt("몸무게를 적으세요.","0"));
+        var weight2=(height-100)*0.9;
+        
+        result=weight2>weight?"적정몸무게 미달":"적정몸무게 이상"
+
+        document.write(result);
+        document.write("<hr>");
+
+
+    </script>
+</body>
+</html>

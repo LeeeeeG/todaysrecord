@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Object Model(DOM) & javascript(순수자바스크립트=바닐라스크립트)</title>
+    </head>
+<body>
+    <h2 style="text-align: center; font-size: 30px;">1. 화살표 함수와 리턴문</h2>
+    <div id="output"></div>
+    <br> <hr>
+    <h2 style="text-align: center; font-size: 30px;">2. 버튼 등록 이벤트</h2>
+    <div style="text-align: center;">
+        <button id="btn1" onclick="food()">버튼1</button> 
+        <button id="btn2">버튼2</button>
+        <button id="btn3">버튼3</button>
+        <a href="#" id="btn4">버튼4</a>
+        <a href="javascript:void(0)" id="btn5">버튼5</a> <!-- a태그의 기본값을 차단하는 방법 2 -->
+        <a href="javascript:" id="btn6">버튼6</a> <!-- a태그의 기본값을 차단하는 방법 3 -->
+    </div>
+
+
+    <script>
+        //<1> 리턴문 & 화살표 함수(Arrow Function())
+
+        //이전 내용 복습
+        fn1(1); //인터프린트언어라 위에서 아래로 읽지만 이름이 있는 함수는 호이스팅 가능
+        function fn1(pa){
+            console.log('선언적 함수' + pa)
+
+        }
+        fn1(2);
+        
+        //fn2(3); Uncaught ReferenceError: Cannot access 'fn2' before initialization at
+        let fn2=function(pa){ //이름이 없는 함수이기 때문에 호이스팅 불가능
+            console.log('익명 함수'+ pa)
+        }
+        fn2(4); //익명함수는 항상 변수()이름 아래에서만 실행 가능
+
+
+
+        //ES 2015  ES6 ES 
+        //Next.js -> ES6 이후의 모든 버전을 일컫는 말
+
+        //1. 화살표 함수
+        //let fn3=(변수) => {함수}
+        //let fn3=z => {} : 변수가 하나일 경우 괄호가 없이 변수만 적어도 동작 가능
+        //let fn3=(a,b) => {} : 변수가 여러개일 경우 괄호 필수
+        let fn3=(a,b) => {
+            console.log('화살표 함수는 익명함수이다. function()만 괄호 하나로 대체해주면 된다.' + a + b)
+        } 
+        fn3(1,2);
+
+        //두 수의 연산을 리턴받아서 출력하는 돔 탬플릿 구현
+        let fn4 = (c,d) =>{
+            return(
+                `<h1>더하기 ${c+d}</h1>
+                <h1>빼기 ${c-d}</h1>
+                <h1>곱하기 ${c*d}</h1>
+                <h1>나누기 ${c/d}</h1>
+                <h1>나눈 나머지 ${c%d}</h1>
+                `
+            );
+        }
+        //fn4(6,7);
+        document.getElementById('output').innerHTML = fn4(2,3)
+        document.getElementById('output').style.fontSize='20px';
+        document.getElementById('output').style.textAlign='center';
+        document.getElementById('output').style.color='#39c';
+
+
+
+        //<2> 버튼 등록 이벤트 -> 이벤트 리스너 사용
+        //1. 클릭시 호출되는 함수
+        const food=()=>{
+            alert('btn1 클릭 이벤트 확인')
+        }
+
+        //2. 이벤트 리스너 등록
+        const btn2=document.getElementById('btn2');
+        btn2.onclick=()=>{
+            alert('btn2 클릭 이벤트 확인')
+        }
+
+        //3. 이벤트 리스너 등록2
+        const btn3=document.getElementById('btn3');
+        btn3.addEventListener('click', ()=>{
+            alert('btn3 클릭 이벤트 확인')
+        })
+
+        //4. 자바스크립트 이벤트 등록 중 가장 많이 권장하는 것 -> a태그의 기본 설정을 차단하는 방법 중 1번
+        const btn4=document.getElementById('btn4');
+        btn4.addEventListener('click',e=>{
+            e.preventDefault(); //기본값을 차단
+            alert('btn4 클릭 이벤트 확인')
+        });
+
+        //5. 
+        const btn5=document.getElementById('btn5');
+        btn5.addEventListener('click',()=>{
+            alert('btn5 클릭 이벤트 확인')
+        });
+
+        //6.
+        const btn6=document.getElementById('btn6');
+        btn6.addEventListener('click',()=>{
+            alert('btn6 클릭 이벤트 확인')
+        });
+
+
+        //모듈 사용
+        //가져오기 file01.js
+        //임포트 import
+        //구문 : import 변수명 from './file01.js'
+        /* import {mo} from './file01.js';
+        console.log('외부 파일 가져오기 결과' + mo()); */
+
+
+        //클래스
+        //객체 == 발전 형태
+        
+        const obj={
+            init:function(){
+                this.header();
+                this.main();
+                this.footer();
+            },
+            header:function(){
+
+            },
+            main:function(){
+
+            },
+            footer:function(){
+
+            }
+        }
+        obj.init();
+
+        const obj1={
+            init:function(){
+                this.header();
+                this.main();
+                this.footer();
+            },
+            header:function(){
+
+            },
+            main:function(){
+
+            },
+            footer:function(){
+
+            }
+        }
+        obj1.init();
+
+        class obj2{
+            init(){
+                this.section
+            }
+        }
+    </script>
+</body>
+</html>

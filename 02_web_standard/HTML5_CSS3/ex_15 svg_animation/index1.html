@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg 기초2 : circle</title>
+    <style>
+        #page{width: 150px; height: 150px; margin: 100px 500px 100px 500px;}
+        #page circle{fill: none; stroke-width: 5px; stroke: green; stroke-linecap: round; animation: loader 4s linear infinite; transform-origin: 50% 50%;}
+        #page circle:nth-child(1){stroke-width: 5px; stroke: blue; stroke-dasharray: 50; animation-delay: -.2s;}
+        #page circle:nth-child(2){stroke-width: 5px; stroke: red; stroke-dasharray: 100; animation-delay: .4s;}
+        #page circle:nth-child(3){stroke-width: 5px; stroke: pink; stroke-dasharray: 180; animation-delay: -.6s;}
+        #page circle:nth-child(4){stroke-width: 5px; stroke-dasharray: 300; animation-delay: -.8s;}
+        @keyframes loader {
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(360deg);}
+            100%{transform: rotate(0deg);}            
+        }
+    </style>
+</head>
+<body>
+    <svg id="page">
+        <circle cx="75" cy="75" r="10"/>
+        <circle cx="75" cy="75" r="30"/>
+        <circle cx="75" cy="75" r="50"/>
+        <circle cx="75" cy="75" r="70"/>
+    </svg>
+</body>
+</html>

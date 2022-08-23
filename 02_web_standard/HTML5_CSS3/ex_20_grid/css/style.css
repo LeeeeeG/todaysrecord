@@ -1,0 +1,9 @@
+body{padding: 50px;}
+.container{display: grid; grid-template-columns: 100px auto 100px; grid-template-rows: 50px 100px; grid-gap: 3px;}
+.container div{text-align: center; color: #fff; font-size: 2em;}
+.container div:nth-child(1){background: red;}
+.container div:nth-child(2){background: orange;}
+.container div:nth-child(3){background: yellow;}
+.container div:nth-child(4){background: green;}
+.container div:nth-child(5){background: blue;}
+.container div:nth-child(6){background: navy;}

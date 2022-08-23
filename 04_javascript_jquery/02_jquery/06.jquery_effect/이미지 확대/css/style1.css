@@ -1,0 +1,5 @@
+.box{width: 500px; height: 500px; margin: 50px auto; border: 3px solid navy; position: relative; overflow: hidden; cursor: pointer;}
+.box img{width: 100%; display: block;}
+.box .leftBox{position: absolute; width: 250px; height: 500px; background: rgba(255,255,255,.6); top: -100%; left: 0;}
+.box .rightBox{position: absolute; width: 250px; height: 500px; background: rgba(255,255,255,.6); top: 100%; right: 0;}
+.box span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 999; color: navy; font-size: 24px; font-weight: bold; opacity: 0;}

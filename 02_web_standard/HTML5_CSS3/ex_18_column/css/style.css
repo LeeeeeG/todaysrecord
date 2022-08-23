@@ -1,0 +1,16 @@
+*{box-sizing: border-box;}
+body{padding: 2rem; margin: 0; line-height: 1.5; background: #121f26; color: #121f26; counter-reset: a;}
+.grid-item{background: #fff; display: flex; margin-bottom: 1rem; align-items: center; justify-content: center; position: relative;}
+.grid-item::before{counter-increment: a; content:counter(a); position: absolute; top: 0; left: 0; background: #f00; width: 1.5rem; height: 1.5rem; color: #fff; text-align: center; line-height: 1.5rem; font-size: 80%;}
+@media screen and (min-width:768px) {
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        grid-template-rows: 4rem;
+        grid-gap: 1rem;
+    }
+    .short{grid-row: span 2;}
+    .tall{grid-row: span 3;}
+    .taller{grid-row: span 4;}
+    .tallest{grid-row: span 5;}
+}

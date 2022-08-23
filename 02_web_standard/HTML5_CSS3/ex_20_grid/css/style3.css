@@ -1,0 +1,17 @@
+html, body{background: #ffeead; margin: 10px;}
+.container div{display: flex; align-items: center; justify-content: center; color: #ffeead; font-size: 2em;}
+.container div:nth-child(1n){background: red;}
+.container div:nth-child(2){background: orange;}
+.container div:nth-child(3){background: yellow;}
+.container div:nth-child(4){background: green;}
+.container{
+    height: 100vh; 
+    display: grid; 
+    grid-gap: 3px; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px;
+}
+.header{grid-column-start: 1; grid-column-end: 13;}
+.menu{grid-column: 1/6;}
+.content{grid-column: 6/-1;} /*-1 = 맨 끝*/
+.footer{grid-column: 1/13;}

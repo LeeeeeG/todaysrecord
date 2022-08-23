@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+#wrap{width: 100px; margin: 100px auto;}
+#wrap .nav li{text-align: center;}
+#wrap .nav li .menu-img{height: 0; overflow: hidden; cursor: pointer; width: 100px;}
+#wrap .nav li .menu-img a img{height: 100px;}
+#wrap .nav li .menu-txt{margin-bottom: 10px;}
+#wrap .nav li .menu-txt .on{display: none;}

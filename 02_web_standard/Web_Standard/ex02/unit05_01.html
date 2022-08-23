@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> 시맨틱 요소를 이용한 마크업 </title>
+	<meta charset="UTF-8" />
+	<style>
+		#wrap{width: 800px; height: 700px; background: red; margin: 0 auto;}
+		header{width: 100%; height: 100px; background: yellow; text-align: center; line-height: 100px;}
+		nav{width: 100%; height: 100px; background: blue; text-align: center; line-height: 100px;}
+		section{width: 600px; height: 400px; background: green; float:left; padding: 20px; box-sizing: border-box;}
+		section article{width: 100%; height: 170px; background: greenyellow; float: left; text-align: center; line-height: 170px;}
+		section article:first-child{margin-bottom: 20px;}
+		aside{width: 200px; height: 400px; background: pink; text-align: center; line-height: 400px; float:left}
+		footer{width: 100%; height: 100px; background: violet; text-align: center; line-height: 100px; clear: both;}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>header : 머릿말</header>
+		<nav>nav : 내비게이션</nav>
+		<section>
+			<article>article : 본문 내용</article>
+			<article>article : 중요한 내용</article>
+		</section>
+		<aside>aside : 부수적인 내용</aside>
+		<footer>footer : 하단</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearfix 사용법</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+    <div id="float1">
+        <h1>float에 아무런 대응도 하지 않은 상태</h1>
+        <div id="header1">header</div>
+        <div id="container1">
+            <div class="lnb1">lnb</div>
+            <div class="content1">content</div>
+        </div>
+        <div id="footer1">footer</div>
+        <p>자식이 float되면 부모의 높이값이 사라진다.</p>
+    </div>
+    <hr>
+    <div id="float2">
+        <h1>float에 float으로 대응한 상태</h1>
+        <div id="header2">header</div>
+        <div id="container2">
+            <div class="lnb2">lnb</div>
+            <div class="content2">content</div>
+        </div>
+        <div id="footer2">footer</div>
+        <p>자식이 float되면 부모의 높이값이 사라지므로 부모도 같이 float하면 자식의 넓이만큼 부모의 넓이가 줄어든다.</p>
+    </div>
+    <hr>
+    <div id="float3">
+        <h1>float에 overflow:hidden으로 대응한 상태</h1>
+        <div id="header3">header</div>
+        <div id="container3">
+            <div class="lnb3">lnb</div>
+            <div class="content3">content</div>
+        </div>
+        <div id="footer3">footer</div>
+        <p>자식이 float되면 부모의 높이값이 사라지므로 부모에 overflow:hidden을 사용하여 대응하였다. <br>
+            *주의점 : 자식의 넓이나 높이가 부모보다 크면 자식이 보이지 않게 된다.
+        </p>
+    </div>
+    <hr>
+    <div id="float4">
+        <h1>float에 가상선택자 :after로 clear하는 방법</h1>
+        <div id="header4">header</div>
+        <div id="container4">
+            <div class="lnb4">lnb</div>
+            <div class="content4">content</div>
+        </div>
+        <div id="footer4">footer</div>
+        <p>자식이 float되면 부모의 높이값이 사라지므로 부모에 가상선택자를 넣어 해결하였다.</p>
+</body>
+</html>

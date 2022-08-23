@@ -1,0 +1,14 @@
+#wrap{width: 400px; height: 600px; border: 5px solid pink; background: green; margin: 0 auto; position: relative;}
+.stick{width: 20px; height: 150px; background: brown; position: absolute; top: 550px; left: 190px;}
+.ball{width: 20px; height: 20px; position: absolute; border-radius: 50%;}
+.ball1{background: white; top: 480px; left: 190px;}
+.ball2{background: yellow; top: 200px; left: 190px;}
+.ball3{background: red; top: 180px; left: 179.5px;}
+.ball4{background: blue; top: 180px; left: 200.5px;}
+.ball5{background: purple; top: 160px; left: 169.5px;}
+.ball6{background: orange; top: 160px; left: 190.5px;}
+.ball7{background: lightgreen; top: 160px; left: 211px;}
+.ball8{background: peachpuff; top: 140px; left: 159.5px;}
+.ball9{background: lightseagreen; top: 140px; left: 179.5px;}
+.ball10{background: cyan; top: 140px; left: 200px;}
+.ball11{background: coral; top: 140px; left: 220px;}

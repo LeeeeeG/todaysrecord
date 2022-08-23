@@ -1,0 +1,22 @@
+#wrap{width: 1000px; padding: 30px; margin: 50px auto;}
+.sec{border: 3px solid brown; padding: 20px; margin-bottom: 10px;}
+#sec1 div{margin-bottom: 5px;}
+.box{background: #ddd; padding: 0 20px;}
+p{border: 1px solid #333; margin-bottom: 5px; padding: 5px;}
+
+.box1 div{margin-bottom: 5px;}
+#basket{background: blanchedalmond; padding: 10px;}
+#apple{background: red;}
+#banana{background: yellow;}
+#orange{background: orange;}
+
+.box2{border: 5px solid salmon; padding: 20px; margin-bottom: 5px;}
+.box3{border: 5px solid salmon; padding: 20px; margin-bottom: 5px;}
+.box4{border: 5px solid salmon; padding: 20px; margin-bottom: 5px;}
+.box5{border: 5px solid lightskyblue; padding: 20px; margin-bottom: 5px;}
+.box6{border: 5px solid lightskyblue; padding: 20px; margin-bottom: 5px;}
+
+ul{list-style: none;}
+ul li{border: 2px solid lightgreen; margin-bottom: 2px;}
+#sec5 h1{text-align: center; margin-bottom: 10px; color: aquamarine;}
+#sec5 div{border: 1px solid seagreen; padding: 5px; margin-bottom: 5px;}

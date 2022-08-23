@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문 이벤트 연결:스타일 바꾸기</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <ul class="menu1">
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+    </ul>
+    <h2>foreach</h2>
+    <ul class="menu2">
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+    </ul>
+    <h2>for of</h2>
+    <ul class="menu3">
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+    </ul>
+    <script>
+        var $menu1=document.querySelectorAll('.menu1 li');
+        var $menu2=document.querySelectorAll('.menu2 li');
+        var $menu3=document.querySelectorAll('.menu3 li');
+        for(var i=0; i<=1; i++){
+            $menu1[i].style.color="blue";
+            $menu1[i].addEventListener("mouseover", function(){
+                this.style.color="red";
+            });
+            $menu1[i].addEventListener("mouseout", function(){
+                this.style.color="green";
+            });
+        }
+        for(var i=2; i<=3; i++){
+            $menu1[i].style.color="green";
+            $menu1[i].addEventListener("mouseover", function(){
+                this.style.color="red";
+            });
+            $menu1[i].addEventListener("mouseout", function(){
+                this.style.color="blue";
+            });
+        }
+
+        /* $menu2[0].style.color="blue";
+        $menu2[1].style.color="blue";
+        $menu2[2].style.color="blue";
+        $menu2[3].style.color="blue"; */
+
+        $menu2.forEach(function(item, index){
+            item.style.color="yellowgreen"
+            item.addEventListener("mouseover", function(){
+                this.style.color="purple";
+            });
+            item.addEventListener("mouseout", function(){
+                this.style.color="black";
+            });
+        })
+
+        var x;
+        for(x of $menu3){
+            x.style.color="blue";
+            x.addEventListener('mouseover',function(){
+                this.style.color="green";
+            });
+            x.addEventListener('mouseout',function(){
+                this.style.color="red";
+            });
+        }
+    </script>
+</body>
+</html>

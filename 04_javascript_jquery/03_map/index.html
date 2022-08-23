@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Kakao Map</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=11d3452dcd03700895a76a33057dda32"></script>
+</head>
+<body>
+    <div id="map" style="width:200px;height:200px;"></div>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+        center: new kakao.maps.LatLng(37.3140657, 126.9512546), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);    
+    </script>
+</body>
+</html>

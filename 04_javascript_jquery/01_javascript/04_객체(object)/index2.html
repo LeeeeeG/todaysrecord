@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체(Array Object)</title>
+    <script>
+        var arr=[30,"따르릉",true]
+        document.write(`<h3>배열값 가져오기1</h3>`);
+        document.write(arr[0], '<br>')
+        document.write(arr[1], '<br>')
+        document.write(arr[2], '<br>')
+
+        document.write(`<h3>배열값 가져오기2</h3>`);
+        for(var i=0; i<arr.length; i++){
+            document.write(arr[i], '<br>')
+        }
+
+        document.write(`<h3>배열값 가져오기3</h3>`);
+        for(i in arr){
+            document.write(arr[i], '<br>')
+        }
+
+        document.write("<hr>")
+
+        var arr1=["사과","귤","바나나","자두"];
+        var arr2=["수박","복숭아","자몽","배"];
+        var result=arr1.join("-"); //
+        console.log(result)
+        var result=arr1.concat(arr2); //
+        console.log(result)
+        var result=arr1.slice(2,3); //
+        console.log(result)
+        var result=arr1.sort(); //
+        console.log(result)
+
+        var result=arr2.reverse(); //
+        console.log(result)
+        
+
+        var greenArr=["교대","방배","강남"];
+        var yellowArr=["미금","정자","수서"];
+        greenArr.splice(2,1,"서초","역삼")
+        console.log(greenArr);
+
+        var data1=yellowArr.pop(); // yellowArr의 마지막 요소를 가져감
+        console.log(data1); //수서
+        var data2=yellowArr.shift(); //yellowArr의 첫번째 요소를 가져감
+        console.log(data2); //미금
+        document.write(yellowArr); //정자
+        yellowArr.push(data2); //data2의 요소를 yellowArr의 맨 마지막에 넣음
+        console.log(data2);
+        console.log(yellowArr);
+        yellowArr.unshift(data1);
+        console.log(yellowArr);
+
+        document.write("<hr>");
+        document.write("<h2>문자열 객체</h2>");
+
+        var t="hello javascript"; //각 알파벳 하나 하나를 분할하여 사용 가능, 0번부터 순번을 매기며 공백 역시 순번에 들어감. 위 문장의 경우 총 15개의 객체가 존재
+        var p=" asd  "
+        var r=t.charAt(4);
+        document.write(r,"<hr>");
+        var a=t.indexOf('ja');
+        document.write(a,"<br>");
+        var a=t.indexOf('hee');
+        document.write(a,"<hr>");
+        var a=t.lastIndexOf('i');
+        document.write(a,"<hr>");
+        var b=t.match('javascript');
+        document.write(b,"<br>");
+        var b=t.match('hi');
+        document.write(b,"<hr>");
+        var c=t.replace('javascript','jquery'); //('바꾸고자 하는 문자', '바뀔 문자') 두개가 들어가야
+        document.write(c,"<hr>");
+        var d=t.search('script');
+        document.write(d,"<hr>");
+        var e=t.slice(9,11); //시작은 자르고 싶은 문자 첫글자의 순번, 끝나는 것은 자르기 직전의 순번
+        document.write(e,"<br>");
+        var e=t.slice(9,-1); //음수를 쓸 경우 뒤에서부터 0번
+        document.write(e,"<hr>");
+        var f=t.substring(9,11); //양수를 쓸 때는 slice와 같은 결과
+        document.write(f,"<br>");
+        var f=t.substring(9,-3); //음수를 쓰면 무조건 인덱스 0을 가리킴
+        document.write(f,"<hr>");
+        var g=t.substr(9,3); //(순번,개수)
+        document.write(g,"<hr>");
+        var h=t.split(" ");
+        document.write(h,"<hr>");
+        var i=t.toUpperCase();// <->toLowerCase
+        document.write(i,"<hr>");
+        var j=t.length; //괄호가 없어야 동작함
+        document.write(j,"<hr>");
+        var k=t.concat(" jquery");
+        document.write(k,"<hr>");
+        var l=p.trim();
+        document.write(l,"<hr>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

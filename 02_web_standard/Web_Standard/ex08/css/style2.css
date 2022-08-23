@@ -1,0 +1,5 @@
+body{line-height: 1.5;}
+.container{width: 75%; margin: 0 auto; columns: 3;}
+figure{/* column-span: all; 이미지가 전체 화면을 전부 차지함*/ break-inside: avoid;}
+h3{break-before: column;}
+img{width: 100%;}

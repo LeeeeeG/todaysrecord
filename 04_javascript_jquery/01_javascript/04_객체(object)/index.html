@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        var tv=new Object();
+        tv.color="white";
+        tv.price="300,000";
+        tv.info=function(){
+            document.write("tv 색상:"+this.color+"<br>"+"tv 가격:"+this.price+"<br>")
+        }
+        tv.info()
+        document.write("<hr>");
+
+        var t=new Date();
+        var y=t.getYear()+1900; //=getFullYear
+        var m=t.getMonth()+1; //수를 셀 때 0부터 시작하기 때문에 +1을 해줘야 지금 현재의 달이 나옴
+        var d=t.getDate();
+        var y1=t.getDay(); //0이 일요일~6이 토요일
+        var h=t.getHours();
+        var m1=t.getMinutes();
+        var s=t.getSeconds();
+        var ms=t.getMilliseconds();
+        var t1=t.getTime();
+        document.write(y,"<br>");
+        document.write(m,"<br>");
+        document.write(d,"<br>");
+        document.write(y1,"<br>");
+        document.write(h,"<br>");
+        document.write(m1,"<br>");
+        document.write(s,"<br>");
+        document.write(ms,"<br>");
+        document.write(t1,"<br>");
+
+        document.write("<hr>")
+        var today=new Date()
+        var newYear=today.getFullYear();
+        var theDate=new Date(newYear, 11, 31);
+        var diffDate=theDate.getTime()-today.getTime();
+
+        var result=Math.ceil(diffDate/(60*1000*60*24));
+        document.write("연말 D-day :"+result+"일 남았습니다.")
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

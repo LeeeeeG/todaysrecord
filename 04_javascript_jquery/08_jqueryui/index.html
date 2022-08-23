@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div id="progress">
+                <div class="pct"><span>0</span>% complete</div>
+            </div>
+            <h1>jquery UI form</h1>
+            <div class="ui-widget">
+                <label for="location">select a location</label>
+                <select name="location" id="location">
+                    <optgroup label="citys">
+                        <option value="Fort Worth1">Fort Worth1</option>
+                        <option value="Fort Worth2">Fort Worth2</option>
+                        <option value="Fort Worth3">Fort Worth3</option>
+                    </optgroup>
+                    <optgroup label="create">
+                        <option value="Money1">Money1</option>
+                        <option value="Money2">Money2</option>
+                        <option value="Money3">Money3</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="ui-widget">
+                <label for="category">category</label>
+                <input type="text" id="category" class="ui-button ui-selectmenu-button">
+            </div>
+            <div class="ui-widget">
+                <label for="experience">experience</label>
+                <input type="text" id="experience">
+            </div>
+            <div class="ui-widget">
+                <label for="startDate">출근</label>
+                <input type="text" id="startDate" class="ui-button ui-selectmenu-button">
+            </div>
+            <fieldset>
+                <legend>지원 동기</legend>
+                <input type="radio" id="rdInternet" value="Internet" name="refer">
+                <label for="rdInternet">Internet</label>
+                <input type="radio" id="rdTV" value="TV" name="refer">
+                <label for="rdTV">TV</label>
+                <input type="radio" id="rdOther" value="Other" name="refer">
+                <label for="rdOther">Other</label>
+            </fieldset>
+            <button id="submit">Submit Form</button>
+        </form>
+    </div>
+</body>
+</html>

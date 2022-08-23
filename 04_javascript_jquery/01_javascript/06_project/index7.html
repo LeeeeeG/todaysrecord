@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 슬라이드2</title>
+    <style>
+        .num-animation{}
+        .num2{}
+        .num3{}
+    </style>
+</head>
+<body>
+    <div class="num-animation" data-num="90">0</div>
+    <div class="num2" data-num2="60">0</div>
+    <div class="num3" data-num3="40">0</div>
+    <script>
+        const numAnimation=document.querySelector('.num-animation');
+        let num=0;
+        let targetNum=numAnimation.getAttribute('data-num');
+
+        let timer=setInterval(function(){
+            ++num;
+            numAnimation.innerText=num;
+            if(num==targetNum){
+                clearInterval(timer);
+            }
+        },10);
+
+        const numAnimation2=document.querySelector('.num2');
+        let num2=0;
+        let targetNum2=numAnimation2.getAttribute('data-num2');
+
+        let timer2=setInterval(function(){
+            ++num2;
+            numAnimation2.innerText=num2;
+            if(num2==targetNum2){
+                clearInterval(timer2);
+            }
+        },30);
+
+        const numAnimation3=document.querySelector('.num3');
+        let num3=0;
+        let targetNum3=numAnimation3.getAttribute('data-num3');
+
+        let timer3=setInterval(function(){
+            ++num3;
+            numAnimation3.innerText=num3;
+            if(num3==targetNum3){
+                clearInterval(timer3);
+            }
+        },50);
+        //console.log(targetNum)
+        //numAnimation.innerText=1;
+    </script>
+</body>
+</html>

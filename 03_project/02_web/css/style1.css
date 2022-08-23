@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#wrap{width: 1920px;}
+.container{width: 1160px; height: inherit; background: rgba(0,0,0,.5); margin: 0 auto;}
+
+/*레이아웃*/
+#header{width: 100%; height: 300px; background: url(../img/header_bg.jpg) no-repeat center center/cover; position: relative;}
+#nav{width: 100%; height: 200px; background: #ccc;}
+
+
+/*헤더영역*/
+.head_nav{width: 100%; height: 30px;}
+.head_nav ul li{float: right;}
+.head_nav ul li a{color: #fff; display: block; float: left; margin-right: 10px; padding-top: 10px;}
+.head_nav ul li a:hover{color: #aaa;}
+.head_title h1{width: 460px; height: 40px; background: #fff; margin: 0 auto; padding: 10px 15px; text-transform: uppercase; font-size: 25px; font-weight: bold; text-align: center; box-shadow: 5px 5px 5px #000; position: absolute; top: 40%; left: 36.5%;}
+.head_title::after{content: "leeee"; background: #fff; font-weight: bold; font-size: 20px; text-transform: uppercase; padding: 5px 10px; box-shadow: 5px 5px 5px #000; position: absolute; top: 55%; left: 47%;} 
+
+/*네비 영역*/
+.nav_box{float: left; width: 35%; height: 100%; padding: 20px 0; box-sizing: border-box; margin: 0 20px;}
+.nav_box:last-child{width: 18%;}
+.nav_box h2{color: #0093bd;}
+.nav_box ul li{width: 50%; float: left;}
+.nav_box:last-child ul li{width: 100%;}
+
+/*본문영역*/
+.con_slide{background: red;}
+.con_slide ul{}
+.con_slide ul li{margin-right: 10px;}
+.con_slide ul li a{display: block; float: left; width: 290px; height: 115px; margin-right: 10px;}
+.con_slide ul li a img{}

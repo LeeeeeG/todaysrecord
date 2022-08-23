@@ -1,0 +1,13 @@
+:root{font-size: 13px;}
+*{margin: 0; padding: 0;}
+html{height: 100%;}
+.clearfix::after{content: ""; display: block; clear: both;}
+body{font-size: 12px; height: 100%;}
+.wrapper{font-size: 8px;}
+.box{background: blue; float: left; margin-right: 20px; color: #fff; text-align: center; line-height: 10em;}
+.box_px{width: 160px; height: 160px;} /* 고정값 */
+.box_em{width: 10em; height: 10em;} /* 부모 기준 */
+.box_rem{width: 10rem; height: 10rem;} /* 문서의 기본값 root 기준 */
+
+p{width: 100vw; height: 100vh; background: red; font-size: 1.5rem;} /* %값은 부모요소 모두에게 넓이/높이값이 있어야 적용됨(body,html), vw vh는 없어도 적용 가능 */
+span{font-size: .8em;} /* 13x1.5x0.8=15.6px 부모요소의 영향 때문*/

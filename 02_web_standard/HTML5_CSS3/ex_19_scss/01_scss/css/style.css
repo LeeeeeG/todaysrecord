@@ -1,0 +1,227 @@
+@charset "UTF-8";
+body {
+  padding-bottom: 100px;
+  background: rgba(0, 0, 128, 0.5);
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 50px;
+}
+
+/*1.변수는 영문, 영문+숫자, 영문-, _소문자*/
+.btn1 {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #666;
+  background: #fff;
+  border: 1px solid #666;
+  text-align: center;
+  display: block;
+}
+.btn1:hover {
+  background: #666;
+  color: #fff;
+}
+
+.btn2 {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid red;
+  background: rgb(94, 94, 255);
+  margin-top: 10px;
+}
+.btn2:hover {
+  background: red;
+}
+
+/*2. 자식 선택자 & 종속 선택자*/
+.sass {
+  color: red;
+}
+.sass ul {
+  border: 1px solid red;
+}
+.sass ul li {
+  background: pink;
+  margin-bottom: 5px;
+  list-style: none;
+}
+.sass ul li a {
+  text-decoration: none;
+}
+.sass ul li a:hover {
+  color: red;
+}
+.sass ul li a.bbb {
+  font-size: 12px;
+}
+.sass ul li .bbb {
+  text-decoration: underline;
+}
+.sass ul li:last-child {
+  border: 1px dotted rgb(94, 94, 255);
+}
+
+/*3. mixin, include*/
+.test, .last, .first {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  box-shadow: 2px 2px 2px #222;
+}
+
+.clearfix {
+  border: 3px solid rgb(94, 94, 255);
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix p {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  box-shadow: 2px 2px 2px #222;
+}
+
+/*4. 매개변수*/
+.var {
+  border: 1px solid rgb(94, 94, 255);
+}
+
+.red {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.var2 {
+  width: 300px;
+  height: 100px;
+  background: yellow;
+}
+
+.var3 {
+  width: 500px;
+  height: 100px;
+  background: green;
+}
+
+/*5. 문자보관*/
+div.string1 {
+  border: 1px solid yellowgreen;
+}
+
+.string2 {
+  border-left: 5px solid red;
+  border-right: 3px solid green;
+}
+
+.string3 {
+  border-top: 2px solid blue;
+}
+
+/*6. for 반복문*/
+.list li {
+  background: no-repeat 0 0/20px 30px;
+  text-indent: 30px;
+  line-height: 50px;
+}
+
+.list li.ico1 {
+  background-image: url(../img/ico1.png);
+}
+
+.list li:nth-child(1)::before {
+  content: "...짱!1 ";
+}
+
+.list li.ico2 {
+  background-image: url(../img/ico2.png);
+}
+
+.list li:nth-child(2)::before {
+  content: "...짱!2 ";
+}
+
+.list li.ico3 {
+  background-image: url(../img/ico3.png);
+}
+
+.list li:nth-child(3)::before {
+  content: "...짱!3 ";
+}
+
+.list li.ico4 {
+  background-image: url(../img/ico4.png);
+}
+
+.list li:nth-child(4)::before {
+  content: "...짱!4 ";
+}
+
+.list li.ico5 {
+  background-image: url(../img/ico5.png);
+}
+
+.list li:nth-child(5)::before {
+  content: "...짱!5 ";
+}
+
+/*7. each문*/
+.ico_book {
+  background: url(../img/book.png) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_zoom {
+  background: url(../img/zoom.png) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_new {
+  background: url(../img/new.png) no-repeat;
+  text-indent: 80px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+/*8. 조건문*/
+.btn {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.if {
+  width: 300px;
+  height: 300px;
+  background: #000080;
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 선택자</title>
+</head>
+<body>
+    <h1 id="title">javascript Basic Selector</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red">li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li id="list3_4">li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="box">
+            box level 1
+            <div>
+                box level 2
+                <div>
+                    box level 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi facere cupiditate qui cumque placeat dignissimos? Optio dolores sint, inventore quo doloribus unde, libero rem, delectus maiores repellat excepturi officia ipsum!</p>
+
+    <script>
+        //html문서는 document.get어쩌구 선택
+        var firstTitle=document.getElementById('title'); //여러번 불러내야 할 경우에는 이처럼 변수로 지정해주는 것이 좋음
+        var myList=document.getElementsByClassName('list');
+        var paragraphs=document.getElementsByTagName('p');
+        var myList2=document.querySelector('.list .red');
+
+        
+        document.getElementById('title').style.color='red'; //이처럼 변수로 지정하지 않고 그냥 불러내면 본문으로 올라가서 다시 찾기 때문
+        firstTitle.style.color='blue';
+        myList2.style.color='red'
+
+        myList[0].style.background='yellow'; 
+        myList[1].style.color='green'; //순번 지정으로 스타일 변경하는 법
+
+        /* paragraphs[0].style.color='blue';
+        paragraphs[1].style.color='purple';
+        paragraphs[2].style.color='yellowgreen'; */
+
+        for(var i=0; i<=paragraphs.length; i++){
+            paragraphs[i].style.color='yellowgreen';
+        } //반복문으로 스타일 변경하는 법
+    </script>
+</body>
+</html>

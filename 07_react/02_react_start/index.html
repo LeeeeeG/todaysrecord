@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React 설치 및 컴포넌트 생성과 사용</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 리액트 웹개발 오픈소스 : 아래의 링크 3개가 무조건 있어야 사용 가능 -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!-- jsx문법을 바꿔줌 -->
+</head>
+<body>
+    <!-- 1. html 돔 컨테이너 생성하기 -->
+    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="foot"></div>
+
+
+
+    <!-- 2. 리액트 컴포넌트 생성하기 -->
+    <script type="text/babel">
+        class WrapComponent extends React.Component{
+            render(){
+                return(
+                    <div id='wrap' style={{width:'100%', height:'100vh', display:'flex', background:'#efefef'}}>
+                        <h2 style={{margin:'auto', fontSize:'70px', color:'#39c'}}>{this.props.title}</h2>
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{this.props.sub}</h3>
+                    </div>
+                );
+            }
+        }
+
+        class SectionComponent extends React.Component{
+            static defaultProps = {
+                title:'SECTION Component', 
+                sub:'Component',
+                kor: 100,
+                eng: 99,
+                math: 100
+            }
+            render(){
+                let {title, sub, kor, eng, math}= this.props
+                return(
+                    <section id="section" style={{width:'100%', height:'100vh', background:'#ccc'}}>
+                        <h2 style={{margin:'auto', fontSize:'70px', color:'#39c'}}>{title}</h2>
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{sub}</h3>
+                        <p style={{margin:'auto', fontSize:'30px', margin:'auto'}}>{kor}</p>
+                        <p style={{margin:'auto', fontSize:'30px', margin:'auto'}}>{eng}</p>
+                        <p style={{margin:'auto', fontSize:'30px',margin:'auto'}}>{math}</p>
+                    </section>
+                );
+            }
+        }
+
+        class FootComponent extends React.Component{
+            render(){
+                let {title,sub,tel,email}=this.props
+                return(
+                    <footer id='footer' style={footerStyle}>
+                        <h2 style={footerStyle1}>{title}</h2>
+                        <h3 style={footerStyle2}>{sub}</h3>
+                        <h3 style={footerStyle2}>{tel}</h3>
+                        <h3 style={footerStyle2}>{email}</h3>
+                    </footer>
+                );
+            }
+        }
+        FootComponent.defaultProps={
+            title:'FootComponent',
+            sub:'props',
+            tel:'010-1111-2222',
+            email:'gawon519@naver.com'
+        }
+        const footerStyle={
+            width:'100%',
+            height:'100vh',
+            display:'flex',
+            flexFlow:'row wrap',
+            background:'#f7f7f7'
+        }
+
+        const footerStyle1={
+            margin:'auto',
+            fontSize:'70px',
+            color:'#c39'
+        }
+
+        const footerStyle2={
+            margin:'auto',
+            fontSize:'50px',
+            color:'#000'
+        }
+
+
+
+    //3. 리액트 돔 : 돔 컨테이너와 리액트 컴포넌트를 연결하기
+    ReactDOM.render(
+        <WrapComponent title='리액트 생성하기' sub='컴포넌트 만들기' />, 
+        document.getElementById('root')
+    );
+    ReactDOM.render(
+        <SectionComponent  />, 
+        document.getElementById('root1')
+    );
+    ReactDOM.render(
+        <FootComponent  />, 
+        document.getElementById('foot')
+    );
+    </script>
+
+    
+</body>
+</html>

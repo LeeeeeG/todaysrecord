@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱태그 레이아웃 만들기3</title>
+    <style>
+        #wrap{width: 1000px; height: 700px; border: 3px solid rgb(255, 136, 0); margin: 50px auto; padding: 10px; box-sizing: border-box;}
+        header{width: 100%; height: 100px; border: 3px solid saddlebrown; box-sizing: border-box; margin-bottom: 10px; padding: 10px;}
+        header .logo{width: 150px; height: 100%; background: yellow; float: left;}
+        header nav{width: 700px; height: 100%; background: lightgreen; float: right; padding: 10px; box-sizing: border-box;}
+        header nav ul{list-style: none; margin: 0; padding: 0;}
+        header nav ul li{width: 120px; height: 55px; background: antiquewhite; float: left; margin-right: 20px;}
+        header nav ul li:last-child{margin-right: 0;}
+        main{width: 100%; height: 453px; border: 3px solid goldenrod; box-sizing: border-box; padding: 10px; margin-bottom: 10px;}
+        main article{width: 610px; height: 100%; border: 3px solid salmon; float: left; padding: 10px; box-sizing: border-box;}
+        main article>div{width: 100%; height: 30px; background: seagreen; box-sizing: border-box; padding: 10px; margin-bottom: 10px;}
+        main article section{width: 100%; height: 155px; border: 3px solid wheat; box-sizing: border-box; padding: 10px; margin-bottom: 10px;}
+        main article section div{width: 100%; height: 100%; background: silver;}
+        main aside{width: 280px; height: 100%; border: 3px solid royalblue; float: right; padding: 10px; box-sizing: border-box; text-align: center; line-height: 427px;}
+        footer{width: 100%; height: 100px; border: 3px solid rosybrown; text-align: center; line-height: 100px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <div></div>
+                <div></div>
+                <section>
+                    <div></div>
+                </section>
+                <section>
+                    <div></div>
+                </section>
+            </article>
+            <aside>aside</aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

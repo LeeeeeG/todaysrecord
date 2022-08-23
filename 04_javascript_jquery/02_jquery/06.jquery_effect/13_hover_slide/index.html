@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover slide</title>
+    <style>
+        .box{width: 1000px; height: 500px; border: 1px solid #ddd; margin: 100px auto; overflow: hidden;}
+        .visual{position: relative; width: 2000px;}
+        .visual ::after{content: ""; display: block; clear: both;}
+        .sc{width: 200px; height: 400px; border: 1px solid #bbb; float: left; margin-top: 50px; margin-left: 40px; box-sizing: border-box;}
+        .section01{background: lightcoral;}
+        .section02{background: lightpink;}
+        .section03{background: lightsalmon;}
+        .section04{background: pink;}
+    </style>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $('.section01').hover(function(){
+                $(this).stop().animate({width:'920px'},500);
+            },function(){
+                $(this).stop().animate({width:'200px'},500);
+            });
+            $('.section02').hover(function(){
+                $('.visual').stop().animate({left:'-240px'},500);
+                $(this).stop().animate({width:'920px'},500);
+            },function(){
+                $(this).stop().animate({width:'200px'},500);
+                $('.visual').stop().animate({left:0},500);
+            });
+            $('.section03').hover(function(){
+                $('.visual').stop().animate({left:'-480px'},500);
+                $(this).stop().animate({width:'920px'},500);
+            },function(){
+                $(this).stop().animate({width:'200px'},500);
+                $('.visual').stop().animate({left:0},500);
+            });
+            $('.section04').hover(function(){
+                $(this).stop().animate({width:'920px'},500);
+                $('.visual').stop().animate({left:'-720px'},500);
+            },function(){
+                $(this).stop().animate({width:'200px'},500);
+                $('.visual').stop().animate({left:0},500);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="visual">
+            <div class="sc section01"></div>
+            <div class="sc section02"></div>
+            <div class="sc section03"></div>
+            <div class="sc section04"></div>
+        </div>
+    </div>
+</body>
+</html>
